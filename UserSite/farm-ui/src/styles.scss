@@ -1,0 +1,10 @@
+@import 'ngx-toastr/toastr';
+
+.group-btn {
+    float: right;
+    margin-right: 5px;
+}
+
+.group-btn:first-child {
+    margin-right: 0px !important;
+}

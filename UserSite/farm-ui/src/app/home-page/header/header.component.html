@@ -1,0 +1,58 @@
+<!-- Topbar Start -->
+<div class="container-fluid px-5 d-none d-lg-block">
+    <div class="row gx-5 py-3 align-items-center">
+        <div class="col-lg-3">
+            <div class="d-flex align-items-center justify-content-start">
+                <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                <h2 class="mb-0">0947267178</h2>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="index.html" class="navbar-brand ms-lg-5">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Farm</span>Production</h1>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="d-flex align-items-center justify-content-end">
+                <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
+    <a href="index.html" class="navbar-brand d-flex d-lg-none">
+        <h1 class="m-0 display-4 text-secondary"><span class="text-white">Farm</span>Fresh</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto py-0">
+            <a routerLink="/" [class]="activeNavbar('/')">Trang chủ</a>
+            <a routerLink="/about-us" [class]="activeNavbar('/about-us')">Về chúng tôi</a>
+            <div class="nav-item dropdown" *ngFor="let cate of Entities">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{cate.name}}</a>
+                <div class="dropdown-menu m-0" *ngFor="let subCate of cate.subCategories">
+                    <a routerLink="/category/{{subCate.id}}" class="dropdown-item">{{subCate.name}}</a>
+                </div>
+            </div>
+            <a routerLink="/contact" [class]="activeNavbar('/contact')">Liên hệ</a>
+            <a *ngIf="!isLogin" routerLink="/register" [class]="activeNavbar('/register')">Đăng ký</a>
+            <a *ngIf="!isLogin" routerLink="/login" [class]="activeNavbar('/login')">Đăng nhập</a>
+            <a *ngIf="isLogin" routerLink="/user-info" [class]="activeNavbar('/user-info')"><span nz-icon nzType="user"
+                    nzTheme="outline"></span>&nbsp;{{userInfo.userName}}</a>
+            <a *ngIf="isLogin" href="javascript:void(0)" class="nav-item nav-link" (click)="logout()">Đăng xuất</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->

@@ -1,0 +1,107 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "FarmProductionAPI.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "FarmProductionAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FarmProductionAPI.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FarmProductionAPI.Core.dll": {}
+        }
+      },
+      "FarmProductionAPI.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/FarmProductionAPI.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FarmProductionAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FarmProductionAPI.Core/1.0.0": {
+      "type": "project",
+      "path": "../FarmProductionAPI.Core/FarmProductionAPI.Core.csproj",
+      "msbuildProject": "../FarmProductionAPI.Core/FarmProductionAPI.Core.csproj"
+    },
+    "FarmProductionAPI.Domain/1.0.0": {
+      "type": "project",
+      "path": "../FarmProductionAPI.Domain/FarmProductionAPI.Domain.csproj",
+      "msbuildProject": "../FarmProductionAPI.Domain/FarmProductionAPI.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "FarmProductionAPI.Core >= 1.0.0",
+      "FarmProductionAPI.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\trung\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\FarmProduction\\FarmProduction\\API\\FarmProductionAPI\\FarmProductionAPI.csproj",
+      "projectName": "FarmProductionAPI",
+      "projectPath": "E:\\FarmProduction\\FarmProduction\\API\\FarmProductionAPI\\FarmProductionAPI.csproj",
+      "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
+      "outputPath": "E:\\FarmProduction\\FarmProduction\\API\\FarmProductionAPI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "E:\\FarmProduction\\FarmProduction\\API\\FarmProductionAPI.Core\\FarmProductionAPI.Core.csproj": {
+              "projectPath": "E:\\FarmProduction\\FarmProduction\\API\\FarmProductionAPI.Core\\FarmProductionAPI.Core.csproj"
+            },
+            "E:\\FarmProduction\\FarmProduction\\API\\FarmProductionAPI.Domain\\FarmProductionAPI.Domain.csproj": {
+              "projectPath": "E:\\FarmProduction\\FarmProduction\\API\\FarmProductionAPI.Domain\\FarmProductionAPI.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
